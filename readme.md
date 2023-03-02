@@ -8,7 +8,7 @@ Maybe a column to show Reserved Quantity should be added
 
 Should the “More Info” link be placed at the end of the row?
 
-On click of Action if an error occurred what will be the action?
+On click of Action if an error occurred what will be the action? I have assumed still open Product page with Error showing.
 
 ## Warehouse API
 

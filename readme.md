@@ -12,7 +12,7 @@ On click of Action if an error occurred what will be the action? I have assumed 
 
 ## Warehouse API
 
-If unable to find Product then should an error be returned?
+If unable to find Product then should an error be returned? At the moment I have assumed to return an Empty Product.
 
 It says to check for negative numbers and return an error – shouldn’t it be checking for 0 amount and returning an error
 

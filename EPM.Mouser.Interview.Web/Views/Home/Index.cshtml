@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<Product>
+
+@{
     ViewData["Title"] = "Test Page";
 }
 
@@ -16,3 +18,42 @@
         - Available stock (this should be orange if < 10 and red < zero)
 
 *@
+
+<div>
+    <div class="row">        
+        <div class="col-3">
+            <strong>Product</strong>
+        </div>   
+        <div class="col-3">
+            <strong>Name</strong>
+        </div>
+        <div class="col-2">
+            <strong>InStockQuantity</strong>
+        </div>        
+        <div class="col-2">
+            <strong>Available Stock</strong>
+        </div>          
+    </div>
+    @foreach (var product in Model)
+    {
+        int qty = @product.InStockQuantity - @product.ReservedQuantity;
+        <div class="row">        
+            <div class="col-3">
+                <a asp-action="ProductPage" asp-route-id="@product.Id">More Info</a>
+            </div>   
+            <div class="col-3">
+                @product.Name
+            </div>
+            <div class="col-2">
+                @product.InStockQuantity
+            </div>
+            <div class="col-2">                                
+                <span style="@(qty < 0 ? "color:Red": qty < 10 ? "color:Orange": "")">
+                     @qty
+                </span>
+            </div>
+               
+        </div>
+    }
+</div>
+        

@@ -27,10 +27,10 @@
         <div class="col-3">
             <strong>Name</strong>
         </div>
-        <div class="col-2">
+        <div class="col-3">
             <strong>InStockQuantity</strong>
         </div>        
-        <div class="col-2">
+        <div class="col-3">
             <strong>Available Stock</strong>
         </div>          
     </div>
@@ -44,10 +44,10 @@
             <div class="col-3">
                 @product.Name
             </div>
-            <div class="col-2">
+            <div class="col-3">
                 @product.InStockQuantity
             </div>
-            <div class="col-2">                                
+            <div class="col-3">                                
                 <span style="@(qty < 0 ? "color:Red": qty < 10 ? "color:Orange": "")">
                      @qty
                 </span>
